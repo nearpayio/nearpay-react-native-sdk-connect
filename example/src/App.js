@@ -287,7 +287,7 @@ export default class App extends Component {
   }
 
   doShow(){
-    Nearpay.show().then((response) => {
+    Nearpay.showConnection().then((response) => {
       console.log("doShow",response);
       var resultJSON = JSON.parse(response);
       if(resultJSON.status == 200){
@@ -299,7 +299,7 @@ export default class App extends Component {
   }
 
   doDisconnect(){
-    Nearpay.disConnect().then((response) => {
+    Nearpay.connectionDisconnect().then((response) => {
       console.log("disConnect",response);
       var resultJSON = JSON.parse(response);
       if(resultJSON.status == 200){
@@ -311,7 +311,7 @@ export default class App extends Component {
   }
 
   doGetSession(){
-    Nearpay.getSession().then((response) => {
+    Nearpay.getConnectionSession().then((response) => {
       console.log("getSession",response);
       var resultJSON = JSON.parse(response);
       if(resultJSON.status == 200){

@@ -63,16 +63,16 @@ function connect(inputParams : any): Promise<String> {
   return NearpayPlugin.connectInitialise(inputParams);
 }
 
-function show()  : Promise<String>  {
-  return NearpayPlugin.showConnect();
+function showConnection()  : Promise<String>  {
+  return NearpayPlugin.showConnection();
 }
 
-function disConnect()  : Promise<String>  {
-  return NearpayPlugin.disconnect();
+function connectionDisconnect()  : Promise<String>  {
+  return NearpayPlugin.connectionDisconnect();
 }
 
-function getSession()  : Promise<String>  {
-  return NearpayPlugin.getSession();
+function getConnectionSession()  : Promise<String>  {
+  return NearpayPlugin.getConnectionSession();
 }
 
 
@@ -110,7 +110,7 @@ export {
   session,
   receiptToImage,
   connect,
-  show,
-  disConnect,
-  getSession
+  showConnection,
+  connectionDisconnect,
+  getConnectionSession
 }

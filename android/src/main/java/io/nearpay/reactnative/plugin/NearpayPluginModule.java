@@ -1065,7 +1065,7 @@ public class NearpayPluginModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void showConnect( Promise promise) {
+  public void showConnection( Promise promise) {
         if(nearpayConnect == null){
             Log.i("Connect....", "initialise nil");
             Map<String, Object> paramMap = commonResponse(ErrorStatus.initialise_failed_code,"Plugin Connect missing, please initialise");
@@ -1076,7 +1076,7 @@ public class NearpayPluginModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void disconnect( Promise promise) {
+  public void connectionDisconnect( Promise promise) {
         if(nearpayConnect == null){
             Log.i("Connect....", "initialise nil");
             Map<String, Object> paramMap = commonResponse(ErrorStatus.initialise_failed_code,"Plugin Connect missing, please initialise");
@@ -1087,7 +1087,7 @@ public class NearpayPluginModule extends ReactContextBaseJavaModule {
     }
     
   @ReactMethod
-  public void getSession(Promise promise) {
+  public void getConnectionSession(Promise promise) {
         if(nearpayConnect == null){
             Log.i("Connect....", "initialise nil");
             Map<String, Object> paramMap = commonResponse(ErrorStatus.initialise_failed_code,"Plugin Connect missing, please initialise");

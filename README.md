@@ -236,7 +236,7 @@ Nearpay.reverse(reqData).then((response) => {
 # 10. show
 
 ``` javascript
-     Nearpay.show().then((response) => {
+     Nearpay.showConnection().then((response) => {
         var resultJSON = JSON.parse(response);
         if(resultJSON.status == 200){
 
@@ -249,7 +249,7 @@ Nearpay.reverse(reqData).then((response) => {
 # 11. Connect Session 
 
 ``` javascript
-     Nearpay.getSession().then((response) => {
+     Nearpay.getConnectionSession().then((response) => {
         var resultJSON = JSON.parse(response);
         if(resultJSON.status == 200){
 
@@ -262,7 +262,7 @@ Nearpay.reverse(reqData).then((response) => {
 # 11. Connect Disconnect 
 
 ``` javascript
-     Nearpay.disConnect().then((response) => {
+     Nearpay.connectionDisconnect().then((response) => {
         var resultJSON = JSON.parse(response);
         if(resultJSON.status == 200){
 
