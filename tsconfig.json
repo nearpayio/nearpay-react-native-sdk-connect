@@ -2,10 +2,10 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-nearpay-plugin": ["./src/index"]
+      "react-native-nearpay-sdk-proxy": ["./src/index"]
     },
-    "allowUnreachableCode": true,
-    "allowUnusedLabels": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
@@ -13,12 +13,12 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": false,
+    "noImplicitReturns": true,
     "noImplicitUseStrict": false,
     "noStrictGenericChecks": false,
     "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,

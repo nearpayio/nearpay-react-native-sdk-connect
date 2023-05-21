@@ -1,5 +1,5 @@
 {
-  "name": "react-native-nearpay-plugin",
+  "name": "react-native-nearpay-sdk-proxy",
   "version": "0.1.0",
   "description": "test",
   "main": "lib/commonjs/index",
@@ -28,31 +28,32 @@
   ],
   "scripts": {
     "test": "jest",
-    "typescript": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build",
+    "prepack": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
-    "bootstrap": "yarn example && yarn install && yarn example pods"
+    "bootstrap": "yarn example && yarn install && yarn example pods",
+    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build"
   },
   "keywords": [
     "react-native",
     "ios",
     "android"
   ],
-  "repository": "https://github.com/nearpayio/nearpay-react-native-sdk",
-  "author": "Nearpay",
+  "repository": "https://github.com/nearpayio/react-native-nearpay-sdk-proxy",
+  "author": "nearpay <info@nearpay.io> (https://github.com/nearpayio)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nearpayio/nearpay-react-native-sdk/issues"
+    "url": "https://github.com/nearpayio/react-native-nearpay-sdk-proxy/issues"
   },
-  "homepage": "https://github.com/nearpayio/nearpay-react-native-sdk#readme",
+  "homepage": "https://github.com/nearpayio/react-native-nearpay-sdk-proxy#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@arkweid/lefthook": "^0.7.7",
     "@commitlint/config-conventional": "^17.0.2",
+    "@evilmartians/lefthook": "^1.2.2",
     "@react-native-community/eslint-config": "^3.0.2",
     "@release-it/conventional-changelog": "^5.0.0",
     "@types/jest": "^28.1.2",
@@ -60,14 +61,15 @@
     "@types/react-native": "0.70.0",
     "@types/uuid": "^9.0.1",
     "commitlint": "^17.0.2",
+    "del-cli": "^5.0.0",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^28.1.1",
     "pod-install": "^0.1.0",
     "prettier": "^2.0.5",
-    "react": "18.1.0",
-    "react-native": "0.70.4",
+    "react": "18.2.0",
+    "react-native": "0.71.8",
     "react-native-builder-bob": "^0.20.0",
     "release-it": "^15.0.0",
     "typescript": "^4.5.2"
@@ -79,6 +81,10 @@
     "react": "*",
     "react-native": "*"
   },
+  "engines": {
+    "node": ">= 16.0.0"
+  },
+  "packageManager": "^yarn@1.22.15",
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
@@ -155,6 +161,7 @@
   "dependencies": {
     "@nearpaydev/nearpay-ts-sdk": "^1.0.3",
     "@react-native-async-storage/async-storage": "^1.18.1",
+    "react-native-get-random-values": "^1.9.0",
     "uuid": "^9.0.0"
   }
 }

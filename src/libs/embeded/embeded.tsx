@@ -88,7 +88,7 @@ export class EmbededNearpay {
     enableUiDismiss = true,
     editableReversalAmountUI = true,
     adminPin,
-  }: EmbededRefundOptions): Promise<string> {
+  }: EmbededRefundOptions) {
     const data = {
       amount,
       original_transaction_uuid: originalTransactionUUID,
@@ -110,7 +110,7 @@ export class EmbededNearpay {
     enableReceiptUi = true,
     enableUiDismiss = true,
     adminPin,
-  }: EmbededReconcileOptions): Promise<string> {
+  }: EmbededReconcileOptions) {
     const data = {
       finishTimeout,
       enableReceiptUi: enableReceiptUi,
@@ -126,7 +126,7 @@ export class EmbededNearpay {
     finishTimeout = 60,
     enableReceiptUi = true,
     enableUiDismiss = true,
-  }: ReverseOptions): Promise<string> {
+  }: ReverseOptions) {
     const data = {
       original_transaction_uuid: originalTransactionUUID,
       finishTimeout,
@@ -137,13 +137,13 @@ export class EmbededNearpay {
     return this._callPluginMethod(async () => NearpayPlugin.reverse(data));
   }
 
-  public logout(): Promise<string> {
+  public logout() {
     return this._callPluginMethod(async () =>
       NearpayPlugin.logout({ __dummy__: 1 })
     );
   }
 
-  public setup(): Promise<string> {
+  public setup() {
     return this._callPluginMethod(async () =>
       NearpayPlugin.setup({ __dummy__: 1 })
     );
@@ -155,7 +155,7 @@ export class EmbededNearpay {
     enableReversalUi = true,
     enableReceiptUi = true,
     enableUiDismiss = true,
-  }: SessionOptions): Promise<string> {
+  }: SessionOptions) {
     const data = {
       sessionID,
       finishTimeout,
@@ -165,6 +165,26 @@ export class EmbededNearpay {
     };
 
     return this._callPluginMethod(async () => NearpayPlugin.session(data));
+  }
+
+  public proxyShowConnection() {
+    const data = {
+      __dummy__: 1,
+    };
+
+    return this._callPluginMethod(async () =>
+      NearpayPlugin.proxyShowConnection(data)
+    );
+  }
+
+  public proxyDisconnect() {
+    const data = {
+      __dummy__: 1,
+    };
+
+    return this._callPluginMethod(async () =>
+      NearpayPlugin.proxyDisconnect(data)
+    );
   }
 
   public receiptToImage(inputParams: any): Promise<string> {
