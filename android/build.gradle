@@ -127,8 +127,7 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
-  //implementation 'io.nearpay:nearpay-sdk:2.1.22'
-  implementation "io.nearpay:nearpay-connect:0.0.18"
+  implementation 'io.nearpay:nearpay-proxy:0.0.3'
   implementation 'com.google.code.gson:gson:2.9.0'
 // From node_modules
 }
