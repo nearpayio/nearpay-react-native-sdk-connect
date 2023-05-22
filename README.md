@@ -26,13 +26,15 @@ const nearpayProxy = new EmbededNearpay({
 
 proxy gives a set of methods to use, for exmaple
 
-```typescript
-nearpayProxy.proxyShowConnection(); // will show a screen for connection
-```
+
 
 ### proxyShowConnection
 
 will show a screen with the current connection if exsists, or a button to start the connection
+
+```typescript
+nearpayProxy.proxyShowConnection(); // will show a screen for connection
+```
 
 ### proxyDisconnect
 
