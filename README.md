@@ -1,5 +1,14 @@
 # Neearpay react native proxy SDK
 
+## Installation
+
+```
+npm install "https://github.com/nearpayio/nearpay-react-native-sdk-connect.git#main" --save
+
+Plugin will support minimum supported ANDROID SDK version 21 and above only.
+
+```
+
 ## Initialize
 
 to initialize the proxy use the following:
