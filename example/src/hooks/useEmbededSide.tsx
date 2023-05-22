@@ -4,6 +4,7 @@ import {
   AuthenticationType,
   EmbededNearpay,
   Environments,
+  Locale,
 } from 'react-native-nearpay-sdk-proxy';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -19,6 +20,13 @@ let timeout = 60;
 //   environment,
 // });
 const isAndroid = Platform.select({ android: true });
+
+const nearpay = new EmbededNearpay({
+  authtype: AuthenticationType.email,
+  authvalue: '<enter your email here>',
+  environment: Environments.sandbox,
+  locale: Locale.default,
+});
 
 export default function useEmbededSide() {
   const embededNearpay = useRef(

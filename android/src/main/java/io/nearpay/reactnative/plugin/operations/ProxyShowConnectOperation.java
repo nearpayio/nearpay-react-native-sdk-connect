@@ -12,7 +12,7 @@ public class ProxyShowConnectOperation extends BaseOperation{
 
     @Override
     public void run(Map args, CompletableFuture<Map> promise) {
-        provider.getNearpayLib().nearpayProxy.showConnection();
+      provider.getNearpayLib().nearpayProxy.showConnection();
     }
 
 }
